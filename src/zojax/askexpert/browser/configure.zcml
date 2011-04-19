@@ -14,6 +14,12 @@
      for="..interfaces.IForm"
      class=".form.Form"
      permission="zojax.askexpert.SubmitForm" />
+     
+  <zojax:pagelet
+     name="processed.html"
+     for="..interfaces.IForm"
+     template="confirm.pt"
+     permission="zojax.askexpert.SubmitForm" />
 
   <zojax:pagelet
      type="form.viewspace"

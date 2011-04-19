@@ -87,10 +87,8 @@ class BaseForm(group.GroupForm):
 
 class Form(BaseForm, PageletForm):
 
-    confirm = False
     ignoreContext = True
     formErrorsMessage = _('There were some errors.')
-    confirmTemplate = ViewPageTemplateFile('confirm.pt')
     site_url = None
 
     @property
@@ -102,12 +100,6 @@ class Form(BaseForm, PageletForm):
         if self.context.body is not None:
             return self.context.body.cooked
 
-    def render(self):
-        if self.confirm:
-            return self.confirmTemplate()
-        else:
-            return super(Form, self).render()
-
     @button.buttonAndHandler(_(u'Submit'), name='submit')
     def handleSubmit(self, action):
         data, errors = self.extractData()
@@ -118,11 +110,10 @@ class Form(BaseForm, PageletForm):
             event.notify(FormSubmittedEvent(self.context, data))
             IStatusMessage(self.request).add('Request has been processed.')
 
-            if self.context.confirm:
-                self.confirm = True
-
             if self.context.nextURL:
                 self.redirect(self.context.nextURL)
+            else:
+                self.redirect('%s/processed.html'%absoluteURL(self.context, self.request))
 
     def update(self):
         super(Form, self).update()

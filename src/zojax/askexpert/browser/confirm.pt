@@ -1,2 +1,3 @@
 <tal:block content="structure context/confirm/cooked" />
-<a tal:attributes="href view/site_url">Return to main page</a>
+<a tal:define="site modules/zope.app.component.hooks/getSite"
+   tal:attributes="href string:${site/@@absolute_url}/">Return to main page</a>
