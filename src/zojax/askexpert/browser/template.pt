@@ -1,12 +1,12 @@
 <html>
   <head>
-    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
-    <meta http-equiv="Cobtent-Language" content="en">
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta http-equiv="Cobtent-Language" content="en" />
   </head>
 
   <body>
     <b tal:content="string:${context/title} (${context/__parent__/title})"></b>
-    <br>
+    <br />
 
     <table border="0" width="550" cellspacing="0" cellpadding="3">
       <div tal:repeat="group view/form/dictionary" tal:omit-tag="">
@@ -19,7 +19,7 @@
         </tr>
 
         <tr>
-          <td><br><br></td>
+          <td><br /><br /></td>
         </tr>
       </div>
     </table>
