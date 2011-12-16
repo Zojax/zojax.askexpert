@@ -1,0 +1,129 @@
+##############################################################################
+#
+# Copyright (c) 2003-2004 Zope Corporation and Contributors.
+# All Rights Reserved.
+#
+# This software is subject to the provisions of the Zope Public License,
+# Version 2.1 (ZPL).  A copy of the ZPL should accompany this distribution.
+# THIS SOFTWARE IS PROVIDED "AS IS" AND ANY AND ALL EXPRESS OR IMPLIED
+# WARRANTIES ARE DISCLAIMED, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+# WARRANTIES OF TITLE, MERCHANTABILITY, AGAINST INFRINGEMENT, AND FITNESS
+# FOR A PARTICULAR PURPOSE.
+#
+##############################################################################
+msgid ""
+msgstr ""
+"Project-Id-Version: Development/Unknown\n"
+"POT-Creation-Date: Thu Dec  8 22:03:37 2011\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: Zope 3 Developers <zope3-dev@zope.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: zope/app/locales/extract.py\n"
+
+#: src/zojax/askexpert/browser/form.py:103
+#: src/zojax/askexpert/interfaces.py:36
+#: src/zojax/askexpert/portlets/form.py:72
+#: src/zojax/askexpert/portlets/interfaces.py:34
+msgid "Submit"
+msgstr ""
+
+#: src/zojax/askexpert/browser/form.py:91
+msgid "There were some errors."
+msgstr ""
+
+#: src/zojax/askexpert/browser/template.py:56
+#. Default: ""
+msgid "${name} <${email}>"
+msgstr ""
+
+#: src/zojax/askexpert/configure.zcml:11
+msgid "Submit ask expert form"
+msgstr ""
+
+#: src/zojax/askexpert/configure.zcml:21
+msgid "User configurable form"
+msgstr ""
+
+#: src/zojax/askexpert/configure.zcml:21
+msgid "Ask Expert Form"
+msgstr ""
+
+#: src/zojax/askexpert/configure.zcml:58
+msgid "Fields Group"
+msgstr ""
+
+#: src/zojax/askexpert/configure.zcml:6
+msgid "Allow add ask expert forms to portal."
+msgstr ""
+
+#: src/zojax/askexpert/configure.zcml:6
+msgid "Add ask expert"
+msgstr ""
+
+#: src/zojax/askexpert/configure.zcml:77
+msgid "Mail Data Storage"
+msgstr ""
+
+#: src/zojax/askexpert/interfaces.py:33
+#: src/zojax/askexpert/portlets/interfaces.py:31
+msgid "Submit label"
+msgstr ""
+
+#: src/zojax/askexpert/interfaces.py:34
+#: src/zojax/askexpert/portlets/interfaces.py:32
+msgid "Form submit button label."
+msgstr ""
+
+#: src/zojax/askexpert/interfaces.py:39
+msgid "Body text"
+msgstr ""
+
+#: src/zojax/askexpert/interfaces.py:40
+#: src/zojax/askexpert/interfaces.py:45
+msgid "Form confirmation text."
+msgstr ""
+
+#: src/zojax/askexpert/interfaces.py:44
+msgid "Confirm text"
+msgstr ""
+
+#: src/zojax/askexpert/interfaces.py:49
+msgid "Next URL"
+msgstr ""
+
+#: src/zojax/askexpert/interfaces.py:50
+msgid "URL to redirect after submission. Preferably relative."
+msgstr ""
+
+#: src/zojax/askexpert/interfaces.py:58
+#: src/zojax/askexpert/portlets/interfaces.py:48
+msgid "Fields"
+msgstr ""
+
+#: src/zojax/askexpert/interfaces.py:59
+msgid "Group list"
+msgstr ""
+
+#: src/zojax/askexpert/portlets/configure.zcml:8
+msgid "Ask expert form"
+msgstr ""
+
+#: src/zojax/askexpert/portlets/interfaces.py:27
+msgid "Label"
+msgstr ""
+
+#: src/zojax/askexpert/portlets/interfaces.py:37
+msgid "Redirect to real form"
+msgstr ""
+
+#: src/zojax/askexpert/portlets/interfaces.py:41
+msgid "Ask expert Form"
+msgstr ""
+
+#: src/zojax/askexpert/portlets/interfaces.py:49
+msgid "Fields list"
+msgstr ""
+
