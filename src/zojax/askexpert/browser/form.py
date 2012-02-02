@@ -108,7 +108,7 @@ class Form(BaseForm, PageletForm):
         else:
             removeSecurityProxy(self.context).processData(data, self.request)
             event.notify(FormSubmittedEvent(self.context, data))
-            IStatusMessage(self.request).add('Request has been processed.')
+            IStatusMessage(self.request).add(_(u'Request has been processed.'))
 
             if self.context.nextURL:
                 self.redirect(self.context.nextURL)

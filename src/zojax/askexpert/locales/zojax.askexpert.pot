@@ -30,6 +30,11 @@ msgstr ""
 msgid "Submit"
 msgstr ""
 
+#: src/zojax/askexpert/browser/form.py:111
+#: src/zojax/askexpert/portlets/form.py:80
+msgid "Request has been processed."
+msgstr ""
+
 #: src/zojax/askexpert/browser/form.py:91
 msgid "There were some errors."
 msgstr ""

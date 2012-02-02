@@ -77,7 +77,7 @@ class PortletForm(Form):
             return
         if not self.portlet.redirectToForm:
             removeSecurityProxy(self.context).processData(data, self.request)
-            IStatusMessage(self.request).add('Request has been processed.')
+            IStatusMessage(self.request).add(_(u'Request has been processed.'))
 
             if self.context.confirm:
                 self.confirm = True
