@@ -5,8 +5,12 @@
   </head>
 
   <body>
-    <b tal:content="string:${context/title} (${context/__parent__/title})"></b>
-    <br />
+    <h2>
+        <a target="_blank" href="#" tal:attributes="href view/url"
+            tal:content="context/title"></a>
+        (<a target="_blank" href="#" tal:attributes="href view/portal_url"
+            tal:content="view/portal_title"></a>)
+    </h2>
 
     <table border="0" width="550" cellspacing="0" cellpadding="3">
       <div tal:repeat="group view/form/dictionary" tal:omit-tag="">
@@ -23,5 +27,6 @@
         </tr>
       </div>
     </table>
+
   </body>
 </html>

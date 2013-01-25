@@ -18,7 +18,11 @@ $Id$
 from email.Utils import formataddr
 
 from zope import interface, component, i18n
+from zope.app.component.hooks import getSite
 from zope.component import queryUtility, getMultiAdapter
+from zope.traversing.browser import absoluteURL
+
+from z3c.breadcrumb.interfaces import IBreadcrumb
 
 from zojax.mail.interfaces import IFromAddress
 
@@ -42,7 +46,14 @@ class MessageTemplate(object):
 
     def update(self):
         super(MessageTemplate, self).update()
-        self.form = getMultiAdapter((self.context, self.request), IFormResults)
+
+        request, context = self.request, self.context
+
+        self.portal_title = getMultiAdapter((getSite(), request), IBreadcrumb).name
+        self.portal_url = '%s/' % absoluteURL(getSite(), request)
+        self.url = '%s/' % absoluteURL(context, request)
+
+        self.form = getMultiAdapter((context, request), IFormResults)
         self.form.update(self.record)
 
 
