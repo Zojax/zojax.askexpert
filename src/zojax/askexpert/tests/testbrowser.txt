@@ -52,7 +52,7 @@ Create Form
     >>> admin.getControl('Confirm text', index=0).value = 'Some Confirm Text'
     >>> admin.getControl('Publish').click()
     >>> admin.url
-    'http://localhost/space/Form/'
+    'http://localhost/space/some-form/'
 
 We add fields:
     >>> admin.open('context.html')
@@ -91,7 +91,7 @@ We add storages
     >>> admin.getControl('From email address').value = 'question@some.com'
     >>> admin.getControl(name="content.add.buttons.add").click()
     >>> admin.url
-    'http://localhost/space/Form/MailDataStorage/'
+    'http://localhost/space/some-form/MailDataStorage/'
 
 Register form submission event subscriber
 
@@ -105,7 +105,7 @@ Register form submission event subscriber
 
 We use form
 
-    >>> user.open('http://localhost/space/Form')
+    >>> user.open('http://localhost/space/some-form')
     Traceback (most recent call last):
     ...
     Unauthorized: (<zojax.layout.zcml.PageletClass from <class 'zojax.askexpert.browser.form.Form'> ...>, 'browserDefault', 'zojax.askexpert.SubmitForm')
@@ -115,7 +115,7 @@ We should add permission to submit form
     >>> IPrincipalPermissionManager(getRootFolder()).grantPermissionToPrincipal(
     ...     'zojax.askexpert.SubmitForm', 'zope.user')
 
-    >>> user.open('http://localhost/space/Form')
+    >>> user.open('http://localhost/space/some-form')
 
     >>> print user.contents
     <html>
@@ -131,10 +131,9 @@ We should add permission to submit form
     >>> print user.contents
     <html>
     ...
-    <div id="z-portal-statusmessage"><div class="statusMessage">Request has been processed.</div>
+        <div id="z-portal-statusmessage"><div class="statusMessage">Request has been processed.</div>
     ...
-    ...Some Confirm Text
-    <a href="http://localhost/">Return to main page</a>
+    	<div id="z-portal-workspace"><div id="z-portal-viewspace"><div id="z-content">Some Confirm Text<a href="http://localhost/">Return to main page</a></div></div></div>
     ...
     </html>
 
@@ -146,11 +145,14 @@ We should add permission to submit form
 
     >>> print emails[-1][3]
     <html>
-      <head><meta http-equiv="Cobtent-Language" content="en">
+      <head><meta http-equiv="Cobtent-Language" content="en" />
       </head>
       <body>
-        <b>Some Form (Space)</b>
-        <br>
+        <h2>
+            <a target="_blank"
+               href="http://localhost/space/some-form/">Some Form</a>
+            (<a target="_blank" href="http://localhost/">top</a>)
+        </h2>
         <table border="0" width="550" cellspacing="0" cellpadding="3">
             <tr>
               <th colspan="2" align="left"></th>
@@ -168,7 +170,7 @@ We should add permission to submit form
               <td>dumb@dumb.com</td>
             </tr>
             <tr>
-              <td><br><br></td>
+              <td><br /><br /></td>
             </tr>
         </table>
       </body>
@@ -183,7 +185,7 @@ Form portlet
     >>> admin.getControl('Form', index=0).displayValue = ['Some Form']
     >>> form = admin.getControl('Form', index=0).value[0]
     >>> admin.getControl('Save').click()
-    >>> id = component.getUtility(IIntIds, context=root).getId(root['space']['Form']['question'])
+    >>> id = component.getUtility(IIntIds, context=root).getId(root['space']['some-form']['question'])
     >>> admin.open('http://localhost/space/context.html/presentation/pm-columns.test/portlets.askexpertform/index.html?form.widgets.fields:list='+str(id)+'&form.widgets.redirectToForm:list=true&form.buttons.save=value&form.widgets.form:list='+form)
 
     >>> user.open('http://localhost/space/portlet.html')
@@ -193,7 +195,7 @@ Form portlet
     ...<h2 class="z-portlet-header">Some Form</h2>
       <div class="z-portlet-body">
         <div class="z-portlet-item">
-          <div class="z-form z-form-standard"><form action="http://localhost/space/Form/" method="post" enctype="multipart/form-data" name="form" id="form">
+          <div class="z-form z-form-standard"><form action="http://localhost/space/some-form/" method="post" enctype="multipart/form-data" name="form" id="form">
       <h1 class="z-form-label">Some Form</h1><div class="z-form-description">Some Body Text</div>...
     ...
     </html>
@@ -210,7 +212,7 @@ We see here only selected fields, not all
 After submit we get redirected to real form with preselected values
     >>> user.getControl('Submit question').click()
     >>> user.url
-    'http://localhost/space/Form/'
+    'http://localhost/space/some-form/'
 
 And we have no portlet:
     >>> '<h2 class="z-portlet-header">Form</h2>' not in user.contents
