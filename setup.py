@@ -66,6 +66,7 @@ setup(name = 'zojax.askexpert',
                           'z3c.schema',
 
                           'zojax.mail',
+                          'zojax.product',
                           'zojax.content.type',
                           'zojax.content.browser',
                           'zojax.content.draft',
