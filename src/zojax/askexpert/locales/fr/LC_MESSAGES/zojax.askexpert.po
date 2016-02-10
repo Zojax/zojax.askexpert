@@ -1,6 +1,6 @@
-##############################################################################
+# #############################################################################
 #
-# Copyright (c) 2003-2004 Zope Foundation and Contributors.
+# Copyright (c) 2003-2004 Zope Corporation and Contributors.
 # All Rights Reserved.
 #
 # This software is subject to the provisions of the Zope Public License,
@@ -10,14 +10,14 @@
 # WARRANTIES OF TITLE, MERCHANTABILITY, AGAINST INFRINGEMENT, AND FITNESS
 # FOR A PARTICULAR PURPOSE.
 #
-##############################################################################
+# #############################################################################
 msgid ""
 msgstr ""
-"Project-Id-Version: Meaningless\n"
+"Project-Id-Version: Development/Unknown\n"
 "POT-Creation-Date: Wed Feb 10 17:48:42 2016\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: Zope 3 Developers <zope-dev@zope.org>\n"
+"PO-Revision-Date: 2012-04-15 13:20-0500\n"
+"Last-Translator: Mariné Pérez <marine.perez@gmail.com>\n"
+"Language-Team: Zope 3 Developers <zope3-dev@zope.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -27,15 +27,13 @@ msgstr ""
 msgid "There were some errors."
 msgstr ""
 
-#: zojax/askexpert/browser/form.py:103
-#: zojax/askexpert/interfaces.py:36
+#: zojax/askexpert/browser/form.py:103 zojax/askexpert/interfaces.py:36
 #: zojax/askexpert/portlets/form.py:72
 #: zojax/askexpert/portlets/interfaces.py:34
 msgid "Submit"
-msgstr ""
+msgstr "Envoyer"
 
-#: zojax/askexpert/browser/form.py:111
-#: zojax/askexpert/portlets/form.py:80
+#: zojax/askexpert/browser/form.py:111 zojax/askexpert/portlets/form.py:80
 msgid "Request has been processed."
 msgstr ""
 
@@ -43,13 +41,11 @@ msgstr ""
 msgid "${name} <${email}>"
 msgstr ""
 
-#: zojax/askexpert/interfaces.py:33
-#: zojax/askexpert/portlets/interfaces.py:31
+#: zojax/askexpert/interfaces.py:33 zojax/askexpert/portlets/interfaces.py:31
 msgid "Submit label"
-msgstr ""
+msgstr "Envoyer"
 
-#: zojax/askexpert/interfaces.py:34
-#: zojax/askexpert/portlets/interfaces.py:32
+#: zojax/askexpert/interfaces.py:34 zojax/askexpert/portlets/interfaces.py:32
 msgid "Form submit button label."
 msgstr ""
 
@@ -57,8 +53,7 @@ msgstr ""
 msgid "Body text"
 msgstr ""
 
-#: zojax/askexpert/interfaces.py:40
-#: zojax/askexpert/interfaces.py:45
+#: zojax/askexpert/interfaces.py:40 zojax/askexpert/interfaces.py:45
 msgid "Form confirmation text."
 msgstr ""
 
@@ -74,8 +69,7 @@ msgstr ""
 msgid "URL to redirect after submission. Preferably relative."
 msgstr ""
 
-#: zojax/askexpert/interfaces.py:58
-#: zojax/askexpert/portlets/interfaces.py:48
+#: zojax/askexpert/interfaces.py:58 zojax/askexpert/portlets/interfaces.py:48
 msgid "Fields"
 msgstr ""
 
@@ -98,4 +92,3 @@ msgstr ""
 #: zojax/askexpert/portlets/interfaces.py:49
 msgid "Fields list"
 msgstr ""
-

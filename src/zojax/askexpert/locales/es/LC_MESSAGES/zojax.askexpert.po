@@ -1,4 +1,4 @@
-##############################################################################
+# #############################################################################
 #
 # Copyright (c) 2003-2004 Zope Corporation and Contributors.
 # All Rights Reserved.
@@ -10,11 +10,11 @@
 # WARRANTIES OF TITLE, MERCHANTABILITY, AGAINST INFRINGEMENT, AND FITNESS
 # FOR A PARTICULAR PURPOSE.
 #
-##############################################################################
+# #############################################################################
 msgid ""
 msgstr ""
 "Project-Id-Version: Development/Unknown\n"
-"POT-Creation-Date: Thu Dec  8 22:03:37 2011\n"
+"POT-Creation-Date: Wed Feb 10 17:43:58 2016\n"
 "PO-Revision-Date: 2012-04-15 13:20-0500\n"
 "Last-Translator: Mariné Pérez <marine.perez@gmail.com>\n"
 "Language-Team: Zope 3 Developers <zope3-dev@zope.org>\n"
@@ -23,16 +23,73 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: zope/app/locales/extract.py\n"
 
-#: src/zojax/askexpert/browser/form.py:103
-#: src/zojax/askexpert/interfaces.py:36
-#: src/zojax/askexpert/portlets/form.py:72
-#: src/zojax/askexpert/portlets/interfaces.py:34
-msgid "Submit"
-msgstr "Enviar"
-
-msgid "Request has been processed."
-msgstr "El pedido se ha procesado."
-
+#: zojax/askexpert/browser/form.py:91
 msgid "There were some errors."
 msgstr "Hubo algunos errores."
 
+#: zojax/askexpert/browser/form.py:103 zojax/askexpert/interfaces.py:36
+#: zojax/askexpert/portlets/form.py:72
+#: zojax/askexpert/portlets/interfaces.py:34
+msgid "Submit"
+msgstr "Enviar"
+
+#: zojax/askexpert/browser/form.py:111 zojax/askexpert/portlets/form.py:80
+msgid "Request has been processed."
+msgstr "El pedido se ha procesado."
+
+#: zojax/askexpert/browser/template.py:67
+msgid "${name} <${email}>"
+msgstr ""
+
+#: zojax/askexpert/interfaces.py:33 zojax/askexpert/portlets/interfaces.py:31
+#, fuzzy
+msgid "Submit label"
+msgstr "Enviar"
+
+#: zojax/askexpert/interfaces.py:34 zojax/askexpert/portlets/interfaces.py:32
+msgid "Form submit button label."
+msgstr ""
+
+#: zojax/askexpert/interfaces.py:39
+msgid "Body text"
+msgstr ""
+
+#: zojax/askexpert/interfaces.py:40 zojax/askexpert/interfaces.py:45
+msgid "Form confirmation text."
+msgstr ""
+
+#: zojax/askexpert/interfaces.py:44
+msgid "Confirm text"
+msgstr ""
+
+#: zojax/askexpert/interfaces.py:49
+msgid "Next URL"
+msgstr ""
+
+#: zojax/askexpert/interfaces.py:50
+msgid "URL to redirect after submission. Preferably relative."
+msgstr ""
+
+#: zojax/askexpert/interfaces.py:58 zojax/askexpert/portlets/interfaces.py:48
+msgid "Fields"
+msgstr ""
+
+#: zojax/askexpert/interfaces.py:59
+msgid "Group list"
+msgstr ""
+
+#: zojax/askexpert/portlets/interfaces.py:27
+msgid "Label"
+msgstr ""
+
+#: zojax/askexpert/portlets/interfaces.py:37
+msgid "Redirect to real form"
+msgstr ""
+
+#: zojax/askexpert/portlets/interfaces.py:41
+msgid "Ask expert Form"
+msgstr ""
+
+#: zojax/askexpert/portlets/interfaces.py:49
+msgid "Fields list"
+msgstr ""
